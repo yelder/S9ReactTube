@@ -11,9 +11,11 @@ const Header = ({ handleToggleSidebar }) => {
 
             <FaBars className="header__menu" size={26}
                 onClick={() => handleToggleSidebar()} />
+            <div>
+                <img src="http://pngimg.com/uploads/youtube/youtube_PNG102354.png" alt="" className="header__logo" />
+                <p>Reactube</p>
+            </div>
 
-            <img src="http://pngimg.com/uploads/youtube/youtube_PNG102354.png" alt="" className="header__logo" />
-            <p>ReactTube</p>
             <form >
                 <input type="text" placeholder="Search" /><button type="submit">
                     <AiOutlineSearch size={22} />

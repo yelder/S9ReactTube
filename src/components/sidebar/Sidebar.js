@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './_sidebar.scss'
 
@@ -8,12 +9,19 @@ import {
     MdHistory,
     MdLibraryBooks,
     MdHome,
-    MdSentimentDissatisfied
-} from "react-icons/md"
+    MdSentimentDissatisfied,
+} from 'react-icons/md'
+import { useDispatch } from 'react-redux'
+import { log_out } from '../../redux/actions/auth.action'
 
 const Sidebar = ({ sidebar, handleToggleSidebar }) => {
+    const dispatch = useDispatch()
+    const logOutHandler = () => {
+        dispatch(log_out())
+    }
     return (
-        <nav className={sidebar ? "sidebar open" : "sidebar"}
+        <nav
+            className={sidebar ? 'sidebar open' : 'sidebar'}
             onClick={() => handleToggleSidebar(false)}>
             <li>
                 <MdHome size={23} />
@@ -23,34 +31,35 @@ const Sidebar = ({ sidebar, handleToggleSidebar }) => {
                 <MdSubscriptions size={23} />
                 <span>Suscripciones</span>
             </li>
+
             <li>
                 <MdThumbUp size={23} />
-                <span>Video Favorito</span>
+                <span>Me gusta</span>
             </li>
+
             <li>
                 <MdHistory size={23} />
-                <span>Historial</span>
+                <span>Historia</span>
             </li>
 
             <li>
                 <MdLibraryBooks size={23} />
                 <span>Libreria</span>
             </li>
-
             <li>
                 <MdSentimentDissatisfied size={23} />
-                <span>No lo sé</span>
+                <span>No me gusta</span>
             </li>
 
             <hr />
-            <li>
+
+            <li onClick={logOutHandler}>
                 <MdExitToApp size={23} />
-                <span>Salir</span>
+                <span>Cerrar Sesión</span>
             </li>
 
             <hr />
         </nav>
     )
 }
-
 export default Sidebar
