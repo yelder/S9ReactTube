@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
-import { useDispatch, useSelector } from 'react-redux'
-import CategoriesBar from '../../components/categoriesBar/CategoriesBar'
+import { Col, Container } from 'react-bootstrap'
 import Video from '../../components/video/Video'
+import CategoriesBar from '../../components/categoriesBar/CategoriesBar'
+import { useDispatch, useSelector } from 'react-redux'
 import {
     getPopularVideos,
     getVideosByCategory,
 } from '../../redux/actions/videos.action'
+
 import InfiniteScroll from 'react-infinite-scroll-component'
 import SkeletonVideo from '../../components/skeletons/SkeletonVideo'
 
@@ -52,7 +53,6 @@ const HomeScreen = () => {
                     ))}
             </InfiniteScroll>
         </Container>
-
     )
 }
 

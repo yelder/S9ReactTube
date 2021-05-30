@@ -6,6 +6,8 @@ import {
 } from '../../redux/actions/comments.action'
 import Comment from '../comment/Comment'
 import './_comments.scss'
+
+//Componente de comentarios
 const Comments = ({ videoId, totalComments }) => {
     const dispatch = useDispatch()
 

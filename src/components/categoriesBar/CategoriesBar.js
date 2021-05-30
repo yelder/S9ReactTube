@@ -28,6 +28,7 @@ const keywords = [
 ]
 
 const CategoriesBar = () => {
+    //Componente para establecer las categorias de videos
     const [activeElement, setActiveElement] = useState('All')
 
     const dispatch = useDispatch()
