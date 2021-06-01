@@ -43,7 +43,11 @@ const App = () => {
 
     useEffect(() => {
         if (!loading && !accessToken) {
-            history.push('/auth')
+            history.push('/')
+            //IMPORTANTE PARA INICIAR SESIÓN Y LOGEARSE CON GMAIL SE UTILIZA
+            //history.push('/auth')
+            //Se establecería un login para entrar con gmail a la app y tanto el logo como
+            //las preferencias del usuario estarían establecidas
         }
     }, [accessToken, loading, history])
 

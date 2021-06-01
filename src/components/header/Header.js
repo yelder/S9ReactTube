@@ -32,6 +32,7 @@ const Header = ({ handleToggleSidebar }) => {
                 alt=''
                 className='header__logo'
             />
+            <p>Reactube</p>
 
             <form onSubmit={handleSubmit}>
                 <input
