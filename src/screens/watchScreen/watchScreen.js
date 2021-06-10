@@ -13,7 +13,7 @@ import {
 } from '../../redux/actions/videos.action'
 import './watchScreen.scss'
 
-//Problemas con la mayúscula de esta clase
+//Problemas con la mayúscula de esta clase por la mayuscula en watchhScreen
 const WatchScreen = () => {
     const { id } = useParams()
 
